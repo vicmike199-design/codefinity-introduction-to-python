@@ -15,17 +15,18 @@ for product_name, values in products.items():
     quantity_sold = int(values[1])
     # Multiply price and quantity of each product
     total_sales = price * quantity_sold
+    # Print total sales for each product
+    print(f"Total sales for {product_name}: ${total_sales:.2f}")
     # Append total sales to total sales list
     total_sales_list.append(total_sales)
     # Sum of all sales
     total_sum = sum(total_sales_list)
+
     # Get min and max sales values
     min_sales = min(total_sales_list)
     max_sales = max(total_sales_list)
-    # Print total sales for each product
-    print(f"Total sales for {product_name}: ${total_sales:.2f}")
     # Print total, min, and max sales
-    print(f"Total sum of all sales: ${total_sales}")
+    print(f"Total sum of all sales: ${total_sum}")
     print(f"Minimum sales: ${min_sales}")
     print(f"Maximum sales: ${max_sales}")
     
